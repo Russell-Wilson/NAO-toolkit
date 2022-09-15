@@ -1,5 +1,5 @@
 # NAO-toolkit
-NAO Python toolkit
+An opensource NAO Python toolkit.
 
 
 
