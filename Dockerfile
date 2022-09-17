@@ -1,4 +1,4 @@
-FROM python:2
+FROM kw90/naoqi-opencv-developer:latest
 
 WORKDIR /usr/src/app
 
@@ -8,3 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 CMD [ "python", "./main.py" ]
+
