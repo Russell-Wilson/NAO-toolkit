@@ -1,0 +1,5 @@
+services:
+  python-container:
+    build: .
+    working_dir: /usr/src/app
+
