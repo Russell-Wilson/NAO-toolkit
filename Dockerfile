@@ -7,5 +7,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD [ "python", "./main.py" ]
-
+# CMD [ "python", "./tests/understandWord.py"]
+# CMD [ "python", "./tests/understandWord.py"]
+# CMD [ "python", "./tests/reset.py"]

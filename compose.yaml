@@ -1,6 +1,5 @@
 services:
-  Python-container:
-    image: kw90/naoqi-opencv-developer:latest
+  python-container:
     build: .
     working_dir: /usr/src/app
-    command: "python main.py"
+
