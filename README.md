@@ -5,8 +5,8 @@ An opensource NAO Python toolkit.
 This repo utilises docker to expedite build:
 -   image (https://hub.docker.com/r/kw90/naoqi-opencv-developer) 
 
-If the script required no terminal interaction, the script can be run by creating a CMD entry in the dockerfile or a command entry in the compose file. 
-The script and build can then be run with the following. If no rebuild is required then '--build' is not required
+If the script requires no terminal interaction the script and build can then be run with the following. 
+As no bind mounts are used for this work, a container is rebuilt on launch with the '--build' flag.
 Command for build:
   - "docker compose up --build"
 
