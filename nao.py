@@ -1,10 +1,10 @@
 from naoqi import ALProxy
+from PIL import Image
 
 class Nao:
   def __init__(self, IP, PORT):
     self.IP = IP
     self.PORT = PORT
-    self.memory = ALProxy("ALMemory", self.IP, self.PORT)
 
   def naoSpeech(self, sentence):
       try: 
@@ -32,6 +32,30 @@ class Nao:
         self.naoSpeech(sentence)
       except Exception as e: 
         print('could not walk and talk', e)
+  
+  def showNaoImage(self):
+    try: 
+      camProxy = ALProxy("ALVideoDevice", self.IP, self.PORT)
+
+      resolution = 2    # VGA
+      colorSpace = 11   # RGB
+
+      videoClient = camProxy.subscribe("python_client", resolution, colorSpace, 5)
+      naoImage = camProxy.getImageRemote(videoClient)
+      camProxy.unsubscribe(videoClient)
+
+      # Get the image size and pixel array.
+      imageWidth = naoImage[0]
+      imageHeight = naoImage[1]
+      array = naoImage[6]
+
+      # Create a PIL Image from our pixel array.
+      im = Image.frombytes("RGB", (imageWidth, imageHeight), array)
+
+      # Save the image.
+      im.save("images\\camImage.png", "PNG")
+    except Exception as e:
+      print('could not get image', e)
 
 
   
