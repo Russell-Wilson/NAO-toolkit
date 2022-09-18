@@ -2,6 +2,13 @@ import sys
 import motion
 import time
 from naoqi import ALProxy
+import os
+from dotenv import load_dotenv
+
+# ENV variables 
+load_dotenv()
+IP = os.environ.get("IP")
+PORT = int(os.environ.get("PORT"))
 
 
 def StiffnessOn(proxy):
@@ -89,17 +96,6 @@ def main(robotIP, effectorName):
 
 
 if __name__ == "__main__":
-    robotIp      = "127.0.0.1"
     effectorName = "LArm"
 
-    if (len(sys.argv) <= 1):
-        print ("Usage python motion_wbEffectorControlArm.py robotIP(optional default: 127.0.0.1) effectorName(RArm or LArm)")
-
-    else:
-        if (len(sys.argv) > 1):
-            robotIp = sys.argv[1]
-
-        if (len(sys.argv) > 2):
-            effectorName = sys.argv[2]
-
-    main(robotIp, effectorName)
+    main(IP, effectorName)
