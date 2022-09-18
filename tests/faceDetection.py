@@ -48,7 +48,7 @@ class HumanGreeterModule(ALModule):
         
 def main():
 
-    myBroker = ALBroker("myBroker", "0.0.0.0", 0, "192.168.0.60", 9559)
+    myBroker = ALBroker("myBroker", "0.0.0.0", 0, NAO_IP, PORT)
 
     global HumanGreeter
     HumanGreeter = HumanGreeterModule("HumanGreeter")
