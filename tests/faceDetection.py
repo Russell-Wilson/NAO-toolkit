@@ -7,8 +7,13 @@ from naoqi import ALBroker
 from naoqi import ALModule
 
 from optparse import OptionParser
+import os
+from dotenv import load_dotenv
 
-NAO_IP = "192.168.0.60"
+# ENV variables 
+load_dotenv()
+NAO_IP = os.environ.get("IP")
+PORT = int(os.environ.get("PORT"))
 
 # Global variable to store the HumanGreeter module instance
 HumanGreeter = None
