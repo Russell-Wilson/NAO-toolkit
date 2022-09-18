@@ -1,10 +1,9 @@
 # NAO-toolkit
 An opensource NAO Python toolkit.
 
+# Docker build instructions
+This repo utilises docker to expedite build:
+-   image (https://hub.docker.com/r/kw90/naoqi-opencv-developer) 
 
-
-
-# Docker build instructions 
-Build docker container:
-  - "docker build -t python-container ."
-  - "docker run -it --rm --name main python-container"
+Commands for build:
+  - "docker compose up --build"
