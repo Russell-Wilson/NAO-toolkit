@@ -1,5 +1,8 @@
+version: "3.9"
 services:
   python-container:
     build: .
     working_dir: /usr/src/app
+    volumes:
+      - ./images:/usr/src/app/images
 
