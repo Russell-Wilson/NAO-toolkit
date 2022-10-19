@@ -10,4 +10,4 @@ COPY . .
 # CMD [ "python", "./tests/understandWord.py"]
 # CMD [ "python", "./tests/understandWord.py"]
 # CMD [ "python", "./tests/reset.py"]
-CMD [ "python", "./tests/arms.py"]
+# CMD [ "python", "./tests/arms.py"]

@@ -2,6 +2,9 @@
 An opensource NAO Python toolkit.
 
 # Docker build instructions
+
+Please first rename the "example.env" file to ".env" and update the file with your environment variables.
+
 This repo utilises docker to expedite build:
 -   image (https://hub.docker.com/r/kw90/naoqi-opencv-developer) 
 
@@ -13,3 +16,4 @@ Command for build:
 Please note - when wanting to run an interactive terminal, which needs users input please run the scripts commands in order:
 - docker compose build
 - docker compose run --rm python-container 
+
