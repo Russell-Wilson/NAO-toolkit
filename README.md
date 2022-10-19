@@ -19,7 +19,7 @@ Please note - when wanting to run an interactive terminal, which needs users inp
 
 # Running GUIs
 
-the Python Docker image is build on a Linux operating system. To run GUIs Docker images from a windows or mac pc an appropriate x11 server must be installed. 
+the Python Docker image is build on a Linux operating system. To run GUI embedded Docker images from a windows or mac pc an appropriate x11 server must be installed. 
 - windows - VcXsrv - https://sourceforge.net/projects/vcxsrv/
 - mac - Xquartz - https://www.xquartz.org/
 
