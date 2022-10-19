@@ -17,3 +17,10 @@ Please note - when wanting to run an interactive terminal, which needs users inp
 - docker compose build
 - docker compose run --rm python-container 
 
+# Running GUIs
+
+the Python Docker image is build on a Linux operating system. To run GUIs Docker images from a windows or mac pc an appropriate x11 server must be installed. 
+- windows - VcXsrv - https://sourceforge.net/projects/vcxsrv/
+- mac - Xquartz - https://www.xquartz.org/
+
+before running your app ensure the x11 server is running and your "DISPLAY" env variable is updated in your .env folder. 
